@@ -1,0 +1,36 @@
+
+📊 Data Analyst Learning Journey:
+
+✅ Topics Covered
+
+1. **Overview of the Data Analyst Ecosystem**
+
+   * What is data analysis?
+   * Roles and responsibilities of a data analyst
+   * Tools commonly used in the data analysis lifecycle (Excel, SQL, Python, BI tools, etc.)
+
+2. **Types of Data**
+
+   * Structured vs. Unstructured data
+   * Time-series, Cross-sectional, and Panel data
+
+3. **Understanding Different File Formats**
+
+   * CSV (Comma Separated Values)
+   * JSON (JavaScript Object Notation)
+   * Excel (.xlsx, .xls)
+   * XML
+   * SQL
+
+4. **Sources of Data**
+
+   * Internal data (ERP, CRM, logs, etc.)
+   * External data (APIs, Web scraping)
+   * Public datasets (Kaggle, government websites)
+
+5. **Languages Used by Data Professionals**
+
+   * SQL – For querying relational databases
+   * Python – For data analysis, cleaning, and visualization
+   * R – Mainly used in statistical analysis
+   * Java for big data processing (e.g., with Apache Spark)
