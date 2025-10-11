@@ -1,0 +1,106 @@
+# 📊 Data Repositories, ETL, and Big Data – Learning Notes
+
+## 🧠 Overview
+
+This document covers key foundational concepts in data engineering and analytics, 
+including data repositories,
+ETL processes, data pipelines, and Big Data technologies.
+
+---
+
+## 📁 What is a Data Repository?
+
+A **Data Repository** is a centralized location where data is collected, organized, and stored. It allows for:
+
+- Reporting
+- Analytics
+- Archival and historical reference
+
+---
+
+## 🗃️ Types of Data Repositories
+
+### 1. **Databases**
+- Can be **relational (SQL)** or **non-relational (NoSQL)**.
+- Follow specific organizational principles.
+- Examples: MySQL, PostgreSQL, MongoDB, Cassandra.
+- Support data querying, organizing, and retrieval.
+
+### 2. **Data Warehouses**
+- Centralized storage systems that **consolidate incoming data**.
+- Designed for **analytics and reporting**.
+- Examples: Amazon Redshift, Google BigQuery, Snowflake.
+
+### 3. **Data Marts**
+- Subsets of data warehouses.
+- Focused on specific business functions or departments.
+- Provide **faster access** to relevant data.
+
+### 4. **Data Lakes**
+- Store vast amounts of **structured, semi-structured, and unstructured data**.
+- Keep data in its **native format** until needed.
+- Examples: AWS S3 (with Glue or Athena), Azure Data Lake.
+
+### 5. **Big Data Stores**
+- Built to manage and process **large-scale distributed datasets**.
+- Support high-volume, high-velocity data.
+- Examples: Apache Hadoop HDFS, Google Cloud Bigtable.
+
+---
+
+## 🔄 ETL: Extract, Transform, Load
+
+The **ETL process** automates the conversion of raw data into analysis-ready data.
+
+### 🔹 Extract
+- Pull data from one or more source systems.
+
+### 🔹 Transform
+- Clean, validate, and reformat the raw data.
+- Common transformations:
+  - Removing duplicates
+  - Normalizing formats
+  - Handling missing values
+
+### 🔹 Load
+- Move the transformed data into a data repository like:
+  - A Data Warehouse
+  - A Data Lake
+  - A Database
+
+---
+
+## 🚰 Data Pipelines
+
+- A **Data Pipeline** refers to the full journey of data from source to destination.
+- Includes ETL, monitoring, and orchestration.
+- May include real-time or batch data flows.
+- Tools: Apache Airflow, dbt, Luigi, Kafka.
+
+---
+
+## 📈 Big Data
+
+**Big Data** refers to extremely large data sets that are:
+
+- **High Volume** – Massive amounts of data
+- **High Velocity** – Rapid generation and flow of data
+- **High Variety** – Multiple types and formats (text, images, logs, etc.)
+
+### ⚙️ Big Data Tools & Frameworks
+- **Apache Hadoop** – Distributed storage and processing
+- **Apache Hive** – SQL-like querying on Hadoop
+- **Apache Spark** – Fast in-memory data processing engine
+
+---
+
+## 🧾 Summary
+
+| Concept          | Description |
+|------------------|-------------|
+| Data Repository  | Central location for storing and managing data |
+| ETL              | Extract, Transform, Load process to prepare data |
+| Data Pipeline    | Broader system that moves data through ETL and beyond |
+| Big Data         | Large-scale, complex datasets needing specialized tools |
+
+---
