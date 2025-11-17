@@ -1,0 +1,99 @@
+theia@theiadocker-u25039142059:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+--2025-11-17 09:06:29--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 944578 (922K) [application/x-tar]
+Saving to: 'billing-datawarehouse.tgz'
+
+billing-datawarehouse.t 100%[===============================>] 922.44K  --.-KB/s    in 0.007s  
+
+2025-11-17 09:06:30 (137 MB/s) - 'billing-datawarehouse.tgz' saved [944578/944578]
+
+theia@theiadocker-u25039142059:/home/project$ 
+theia@theiadocker-u25039142059:/home/project$ tar -xvzf billing-datawarehouse.tgz
+DimCustomer.sql
+DimMonth.sql
+FactBilling.sql
+star-schema.sql
+verify.sql
+theia@theiadocker-u25039142059:/home/project$ ls *.sql
+DimCustomer.sql  DimMonth.sql  FactBilling.sql  star-schema.sql  verify.sql
+theia@theiadocker-u25039142059:/home/project$ export PGPASSWORD=sHQeTY09VtM28ej4NP2FljB3       
+theia@theiadocker-u25039142059:/home/project$ createdb -h postgres -U postgres -p 5432 billingDW
+theia@theiadocker-u25039142059:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+--2025-11-17 09:06:29--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 944578 (922K) [application/x-tar]
+Saving to: 'billing-datawarehouse.tgz'
+
+billing-datawarehouse.t 100%[===============================>] 922.44K  --.-KB/s    in 0.007s  
+
+2025-11-17 09:06:30 (137 MB/s) - 'billing-datawarehouse.tgz' saved [944578/944578]
+
+theia@theiadocker-u25039142059:/home/project$ 
+theia@theiadocker-u25039142059:/home/project$ tar -xvzf billing-datawarehouse.tgz
+DimCustomer.sql
+DimMonth.sql
+FactBilling.sql
+star-schema.sql
+verify.sql
+theia@theiadocker-u25039142059:/home/project$ ls *.sql
+DimCustomer.sql  DimMonth.sql  FactBilling.sql  star-schema.sql  verify.sql
+theia@theiadocker-u25039142059:/home/project$ export PGPASSWORD=sHQeTY09VtM28ej4NP2FljB3       
+theia@theiadocker-u25039142059:/home/project$ createdb -h postgres -U postgres -p 5432 billingDW
+theia@theiadocker-u25039142059:/home/project$ wget https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+--2025-11-17 09:06:29--  https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0260EN-SkillsNetwork/labs/Setting%20up%20a%20staging%20area/billing-datawarehouse.tgz
+Resolving cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)... 169.63.118.104, 169.63.118.104
+Connecting to cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud (cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud)|169.63.118.104|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 944578 (922K) [application/x-tar]
+Saving to: 'billing-datawarehouse.tgz'
+
+billing-datawarehouse.t 100%[===============================>] 922.44K  --.-KB/s    in 0.007s  
+
+2025-11-17 09:06:30 (137 MB/s) - 'billing-datawarehouse.tgz' saved [944578/944578]
+
+theia@theiadocker-u25039142059:/home/project$ 
+theia@theiadocker-u25039142059:/home/project$ tar -xvzf billing-datawarehouse.tgz
+DimCustomer.sql
+DimMonth.sql
+FactBilling.sql
+star-schema.sql
+verify.sql
+theia@theiadocker-u25039142059:/home/project$ ls *.sql
+DimCustomer.sql  DimMonth.sql  FactBilling.sql  star-schema.sql  verify.sql
+theia@theiadocker-u25039142059:/home/project$ psql  -h postgres -U postgres -p 5432 billingDW < star-schema.sql
+BEGIN
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+ALTER TABLE
+ALTER TABLE
+COMMIT
+theia@theiadocker-u25039142059:/home/project$ psql  -h postgres -U postgres -p 5432 billingDW < DimCustomer.sql
+INSERT 0 1000
+theia@theiadocker-u25039142059:/home/project$ psql  -h postgres -U postgres -p 5432 billingDW < DimMonth.sql
+INSERT 0 132
+theia@theiadocker-u25039142059:/home/project$ psql  -h postgres -U postgres -p 5432 billingDW < FactBilling.sql
+INSERT 0 132000
+theia@theiadocker-u25039142059:/home/project$ psql  -h postgres -U postgres -p 5432 billingDW < verify.sql
+"Checking row in DimMonth Table"
+ count 
+-------
+   132
+(1 row)
+
+"Checking row in DimCustomer Table"
+ count 
+-------
+  1000
+(1 row)
+
+"Checking row in FactBilling Table"
+ count  
+--------
+ 132000
+(1 row)
